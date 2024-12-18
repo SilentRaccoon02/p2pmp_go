@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package common;
+
+option go_package = "github.com/SilentRaccoon02/p2pmp_go/examples/yamux/common";
+
+service ServerServer {
+  rpc CallFuncOnServer(Text) returns(Text) {}
+}
+
+service ClientServer {
+  rpc CallFuncOnClient(Text) returns(Text) {}
+}
+
+message Text {
+  string data = 1;
+}

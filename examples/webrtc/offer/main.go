@@ -106,6 +106,7 @@ func main() { //nolint:gocognit
 			}
 		}
 	})
+
 	// Запуск HTTP-сервера, который принимает запросы от другого процесса
 	// nolint: gosec
 	go func() { panic(http.ListenAndServe(*offerAddr, nil)) }()

@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+package common;
+
+option go_package = "github.com/SilentRaccoon02/p2pmp_go/common";
+
+service P2PManager {
+  rpc AddICEOffer(ICECandidate) returns (Empty) {}
+  rpc AddICEAnswer(ICECandidate) returns (Empty) {}
+  rpc AddSessionDescOffer(SessionDesc) returns (Empty) {}
+  rpc AddSessionDescAnswer(SessionDesc) returns (Empty) {}
+}
+
+service P2PClient {
+  rpc CheckClientType(Empty) returns (ClientType) {}
+  rpc StartOffer(Empty) returns (Empty) {}
+  rpc StartAnswer(Empty) returns (Empty) {}
+  rpc AddICEOffer(ICECandidate) returns (Empty) {}
+  rpc AddICEAnswer(ICECandidate) returns (Empty) {}
+  rpc AddSessionDescOffer(SessionDesc) returns (Empty) {}
+  rpc AddSessionDescAnswer(SessionDesc) returns (Empty) {}
+}
+
+message Empty {
+}
+
+message ClientType {
+  string type = 1;
+}
+
+message ICECandidate {
+  string candidate = 1;
+}
+
+message SessionDesc {
+  string desc = 1;
+}

@@ -3,13 +3,20 @@
         "datachannel",
         "dtls",
         "genproto",
+        "gocognit",
+        "gosec",
         "mdns",
+        "noctx",
+        "nolint",
+        "protoc",
         "randutil",
         "rtcp",
         "sctp",
         "srtp",
         "webrtc",
         "wlynxg",
-        "yamux"
+        "yamux",
+        "однорангового",
+        "одноранговым"
     ]
 }

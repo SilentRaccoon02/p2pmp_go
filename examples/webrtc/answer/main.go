@@ -66,6 +66,7 @@ func main() { // nolint:gocognit
 		defer candidatesMux.Unlock()
 
 		desc := peerConnection.RemoteDescription()
+
 		if desc == nil {
 			pendingCandidates = append(pendingCandidates, c)
 		} else if onICECandidateErr := signalCandidate(*offerAddr, c); onICECandidateErr != nil {

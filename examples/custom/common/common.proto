@@ -2,7 +2,8 @@ syntax = "proto3";
 
 package common;
 
-option go_package = "github.com/SilentRaccoon02/p2pmp_go/examples/custom/common";
+option go_package
+= "github.com/SilentRaccoon02/p2pmp_go/examples/custom/common";
 
 service P2PManager {
   rpc SendMessage(Message) returns(Echo) {}
